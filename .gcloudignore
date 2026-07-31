@@ -1,0 +1,29 @@
+# Ignore env files
+
+.env
+.env.yaml
+.env.me
+.env.\*
+
+# Ignore node_modules
+
+node_modules
+
+# Git
+
+.git
+.gitignore
+
+# Local development files
+
+*.code-workspace
+*.md
+*.log
+*.DS_Store
+*.swp
+*.swo
+.editorconfig
+.prettierrc
+.prettierignore
+create-env-yaml.js
+sample-data/
