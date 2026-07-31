@@ -1,13 +1,13 @@
 {
-	"headers": {
-		"date": "Sun, 26 Jul 2026 23:36:47 -0700",
-		"from": "ebanking@otp.nationstrust.com",
-		"subject": "One Time Password OTP Confirmation IPG ACS",
-		"mime_version": "1.0",
-		"content_type": "multipart/mixed; boundary=\"----=_Part_137620_1036894174.1785134205266\""
-	},
-	"plain": "Trx Attempted for LKR 100.00. Please enter OTP 123456 to complete the transaction. Do not share the OTP with others, Call 0114414141 if any inquiry.\n",
-	"html": null,
-	"reply_plain": null,
-	"attachments": []
+  "headers": {
+    "date": "Sun, 26 Jul 2026 23:36:47 -0700",
+    "from": "ebanking@otp.nationstrust.com",
+    "subject": "One Time Password OTP Confirmation IPG ACS",
+    "mime_version": "1.0",
+    "content_type": "multipart/mixed; boundary=\"----=_Part_137620_1036894174.1785134205266\""
+  },
+  "plain": "Trx Attempted for LKR 100.00. Please enter OTP 123456 to complete the transaction. Do not share the OTP with others, Call 0114414141 if any inquiry.\n",
+  "html": null,
+  "reply_plain": null,
+  "attachments": []
 }

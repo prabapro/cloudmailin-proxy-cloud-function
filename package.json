@@ -1,6 +1,6 @@
 {
   "name": "cloudmailin-proxy",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Google Cloud Run Function (Gen 2) that proxies CloudMailin webhooks to path-scoped apps (e.g. bank OTP notifications)",
   "main": "index.js",
   "type": "module",
@@ -11,7 +11,9 @@
     "start": "functions-framework --target=cloudmailinProxy",
     "dev": "nodemon --exec \"functions-framework --target=cloudmailinProxy --port=8080\"",
     "create-env-yaml": "node scripts/create-env-yaml.js",
-    "deploy": "npm run create-env-yaml && gcloud functions deploy cloudmailin-proxy --runtime=nodejs22 --region=asia-south1 --source=. --entry-point=cloudmailinProxy --trigger-http  --allow-unauthenticated --env-vars-file .env.yaml"
+    "deploy": "npm run create-env-yaml && gcloud functions deploy cloudmailin-proxy --runtime=nodejs22 --region=asia-south1 --source=. --entry-point=cloudmailinProxy --trigger-http  --allow-unauthenticated --env-vars-file .env.yaml",
+    "format": "prettier --write \"./**/*.{html,js,jsx,json,css,ts,tsx}\"",
+    "update-version": "node scripts/update-version.js && npm install && npm run format"
   },
   "dependencies": {
     "@google-cloud/functions-framework": "^2.0.0",
@@ -20,8 +22,12 @@
     "express": "^4.22.2"
   },
   "devDependencies": {
+    "chalk": "^6.0.0",
     "dotenv": "^17.4.2",
-    "nodemon": "^3.1.14"
+    "nodemon": "^3.1.14",
+    "ora": "^9.4.1",
+    "prettier": "^3.9.6",
+    "semver": "^7.8.5"
   },
   "allowScripts": {
     "fsevents@2.3.3": true

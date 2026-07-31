@@ -27,3 +27,4 @@ node_modules
 .prettierignore
 create-env-yaml.js
 sample-data/
+scripts/
