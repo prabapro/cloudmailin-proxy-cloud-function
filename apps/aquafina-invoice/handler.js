@@ -53,7 +53,7 @@ async function handleRequest(req, res) {
 
     try {
       await forwardToEndpoint(payload);
-      logger.info('Forwarded invoice webhook', { subject });
+      logger.info('Forwarded invoice webhook', { subject, payload });
     } catch (err) {
       // The forward failed, but we still ack CloudMailin with 200 so it does
       // not retry. The failure is logged with the full payload for auditing.
