@@ -55,11 +55,11 @@ Requires both `Editor` and `Cloud Run Admin`.
 ### Start dev server (nodemon)
 
 ```sh
-npm run dev
+pnpm dev
 ```
 
 ### Deploy function
 
 ```sh
-npm run deploy
+pnpm deploy
 ```
