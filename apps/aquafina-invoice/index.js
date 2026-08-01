@@ -1,3 +1,12 @@
 // apps/aquafina-invoice/index.js
 
-// Placeholder to forward incoming webhook as is to the external endpoint defined as AQUAFINA_INVOICE_ENDPOINT
+import express from 'express';
+
+import { handleRequest } from './handler.js';
+
+const router = express.Router();
+
+// CloudMailin delivers each forwarded email as a JSON POST to this app's path.
+router.post('/', handleRequest);
+
+export default router;

@@ -4,6 +4,7 @@ import express from 'express';
 
 import logger from './utilities/logger.js';
 import bankOtp from './apps/bank-otp/index.js';
+import aquafinaInvoice from './apps/aquafina-invoice/index.js';
 
 const app = express();
 
@@ -18,9 +19,9 @@ app.get('/health', (req, res) => {
   res.status(200).json({ status: 'ok', service: 'cloudmailin-proxy' });
 });
 
-// Each CloudMailin app owns a path-scoped router. Register new apps here:
-//   app.use('/aquafina-invoice', aquafinaInvoice);
+// Each CloudMailin app owns a path-scoped router. Register new apps here.
 app.use('/bank-otp', bankOtp);
+app.use('/aquafina-invoice', aquafinaInvoice);
 
 // Nothing is mounted at this path.
 app.use((req, res) => {
