@@ -1,9 +1,15 @@
 // apps/aquafina-invoice/handler.js
 
+import path from 'node:path';
+
 import axios from 'axios';
 
 import config from './config.js';
-import logger from '../../utilities/logger.js';
+import { createLogger } from '../../utilities/logger.js';
+
+// Scope logs to this app. The folder name matches the mount path
+// (aquafina-invoice), so the prefix stays in sync without hardcoding a label.
+const logger = createLogger(path.basename(import.meta.dirname));
 
 /**
  * Forward the payload as JSON to the configured endpoint.

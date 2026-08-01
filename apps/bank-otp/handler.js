@@ -1,8 +1,14 @@
 // apps/bank-otp/handler.js
 
+import path from 'node:path';
+
 import { parseOtp } from './parsers/index.js';
 import { sendOtpToSlack } from './notifications/slack.js';
-import logger from '../../utilities/logger.js';
+import { createLogger } from '../../utilities/logger.js';
+
+// Scope logs to this app. The folder name matches the mount path (bank-otp),
+// so the prefix stays in sync without hardcoding a label.
+const logger = createLogger(path.basename(import.meta.dirname));
 
 /**
  * Route handler for `POST /bank-otp`. Receives a forwarded email as JSON,
